@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+
+<!-- My CSS-->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/popup.css">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,200&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<div style="background-color: black;">
+  <br>
+  <a href="index.html" class="coolio" style="padding: 2em; color:rgba(173, 157, 114, 0.95);">
+    <img src="svg/back.svg" style="width: 2em; height: 2em;">
+    Talk to wizard
+  </a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="center">
+  <h1 style="color: white; padding-left: 0;" class="coolio">PROJECTS</h1>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="center">
+  <div class="container">
+    <div class="row">
+      <div class="col col-2 align-self-center">
+        <a onclick="left()">
+          <img src="svg/left.svg" style="width: 3em; height: 3em;">
+        </a>      
+      </div>
+      <div class="col-8">
+        <a href="#popup1">
+          <img id="myImg" style="width: 10em; height: 12em;"> 
+          <br>
+          <br>
+          <p id="projectName" style="color: white; text-align: center;" class="coolio"></p>
+        </a>
+      </div>
+
+      <div class="col col-2 align-self-center">
+        <a onclick="right()">
+          <img src="svg/right.svg" style="width: 3em; height: 3em;">
+        </a>      
+      </div>
+    </div>
+</div>
+</div>
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2 class="coolio" style="color: rgba(173, 157, 114, 0.95);">Soundspace</h2>
+		<a class="close" href="#"><img src="svg/x.svg"></a>
+		<div class="content" style="color: rgba(173, 157, 114, 0.95);">
+			Solo developed the frontend of an eStore that sells vinyls, headphones, record players. 
+            Built all of the features like product pages, navigation bar, shopping cart, and filtered product search using HTML, CSS, and JavaScript.
+		</div>
+    <p style="color: rgba(173, 157, 114, 0.95);">Demo: <a href="https://ec2-184-73-133-185.compute-1.amazonaws.com">s0undspace.com</a></p>
+        <br>
+        <br>
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/5x-8hInnnNA" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+        <br>
+	</div>
+</div>
+</div>
+</head>
+</html>
+
+
+<script>
+  document.getElementById('myImg').src="images/soundspace_icon.png";
+  document.getElementById('projectName').innerHTML="s0undspace.com";
+
+
+  var projects = ["images/soundspace_icon.png", "images/cloud_icon.png", "images/resume_icon.png"];
+  var project_names = ["s0undspace.com", "Device Database & API", "resume.pdf"]
+  let i = 9999;
+  function right() {
+    i = i + 1;
+    document.getElementById('myImg').src=projects[i%3];
+    document.getElementById('projectName').innerHTML=project_names[i%3];
+  }
+  function left() {
+    i = i - 1;
+    document.getElementById('myImg').src=projects[i%3];
+    document.getElementById('projectName').innerHTML=project_names[i%3];
+  }
+</script>
