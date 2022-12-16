@@ -7,6 +7,10 @@
         font-family: 'Press Start 2P', cursive;
         color:rgb(255, 255, 255)
     }
+
+    .luna {
+        font-family: 'Lora', serif;
+    }
     
     .center {
     display: block;
