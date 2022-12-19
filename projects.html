@@ -49,7 +49,7 @@
         </a>      
       </div>
       <div class="col-8">
-        <a href="#popup1">
+        <a href="javascript:popup()">
           <img id="myImg" style="width: 10em; height: 12em;"> 
           <br>
           <br>
@@ -76,12 +76,30 @@
     <p style="color: rgba(173, 157, 114, 0.95);">Demo: <a href="https://ec2-184-73-133-185.compute-1.amazonaws.com">s0undspace.com</a></p>
         <br>
         <br>
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/5x-8hInnnNA" 
-        title="YouTube video player" frameborder="0" 
-        allow="accelerometer; clipboard-write; 
-        encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
+        <br>
+	</div>
+</div>
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2 class="coolio" style="color: rgba(173, 157, 114, 0.95);">wopa</h2>
+		<a class="close" href="#"><img src="svg/x.svg"></a>
+		<div class="content" style="color: rgba(173, 157, 114, 0.95);">
+			wopi chopi.
+		</div>
+    <p style="color: rgba(173, 157, 114, 0.95);">Demo: <a href="https://ec2-184-73-133-185.compute-1.amazonaws.com">s0undspace.com</a></p>
+        <br>
+        <br>
+	</div>
+</div>
+<div id="popup3" class="overlay">
+	<div class="popup">
+		<h2 class="coolio" style="color: rgba(173, 157, 114, 0.95);">wopa</h2>
+		<a class="close" href="#"><img src="svg/x.svg"></a>
+		<div class="content" style="color: rgba(173, 157, 114, 0.95);">
+			wopi chopi.
+		</div>
+    <p style="color: rgba(173, 157, 114, 0.95);">Demo: <a href="https://ec2-184-73-133-185.compute-1.amazonaws.com">s0undspace.com</a></p>
+        <br>
         <br>
 	</div>
 </div>
@@ -108,4 +126,15 @@
     document.getElementById('myImg').src=projects[i%3];
     document.getElementById('projectName').innerHTML=project_names[i%3];
   }
+
+  function popup() {
+    if( (i%3) == 0 )
+      location.hash = "#popup1";
+    else if( (i%3) == 1 )
+      location.hash = "#popup2";
+    else if( (i%3) == 2 )
+      location.href = "resume.pdf";
+  }
+
+
 </script>
