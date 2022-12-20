@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,200&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Orbitron&display=swap" rel="stylesheet">
 
 <div style="background-color: black;">
   <br>
@@ -67,13 +68,21 @@
 </div>
 <div id="popup1" class="overlay">
 	<div class="popup">
-		<h2 class="coolio" style="color: rgba(173, 157, 114, 0.95);">Soundspace</h2>
+		<h2 class="luna" style="color: rgba(255, 255, 255, 0.95); font-family: 'Lora', serif;">Soundspace</h2>
 		<a class="close" href="#"><img src="svg/x.svg"></a>
-		<div class="content" style="color: rgba(173, 157, 114, 0.95);">
-			Solo developed the frontend of an eStore that sells vinyls, headphones, record players. 
-            Built all of the features like product pages, navigation bar, shopping cart, and filtered product search using HTML, CSS, and JavaScript.
+    <br>
+    <br>
+		<div class="content" class="luna" style="color: rgba(255, 251, 241, 0.95); font-family: 'Lora', serif;">
+			-Used AWS, Nginx, PHP, MySQL, to develop an eStore demo that sells vinyls 
+      <br>
+      -Utilized an instance with 1vCPU and 1 GiB RAM. 
+      <br>
+      -Built all of the UI/UX features like product pages, navigation bar, shopping cart, and filtered product search using HTML, CSS, and JavaScript.
+      <br>
+      -Used phpmyadmin to manage all of the data on the site including user account information and product information
 		</div>
-    <p style="color: rgba(173, 157, 114, 0.95);">Demo: <a href="https://ec2-184-73-133-185.compute-1.amazonaws.com">s0undspace.com</a></p>
+    <br>
+    <p style="color: rgba(255, 255, 255, 0.95); font-family: 'Lora', serif;">Site Demo: <a href="https://ec2-184-73-133-185.compute-1.amazonaws.com">s0undspace.com</a></p>
         <br>
         <br>
         <br>
@@ -81,22 +90,16 @@
 </div>
 <div id="popup2" class="overlay">
 	<div class="popup">
-		<h2 class="coolio" style="color: rgba(173, 157, 114, 0.95);">wopa</h2>
+		<h2 class="luna" style="color: white; font-family: 'Lora', serif;">Device Database & API</h2>
 		<a class="close" href="#"><img src="svg/x.svg"></a>
-		<div class="content" style="color: rgba(173, 157, 114, 0.95);">
-			wopi chopi.
-		</div>
-    <p style="color: rgba(173, 157, 114, 0.95);">Demo: <a href="https://ec2-184-73-133-185.compute-1.amazonaws.com">s0undspace.com</a></p>
-        <br>
-        <br>
-	</div>
-</div>
-<div id="popup3" class="overlay">
-	<div class="popup">
-		<h2 class="coolio" style="color: rgba(173, 157, 114, 0.95);">wopa</h2>
-		<a class="close" href="#"><img src="svg/x.svg"></a>
-		<div class="content" style="color: rgba(173, 157, 114, 0.95);">
-			wopi chopi.
+    <br>
+    <br>
+		<div class="content" style="color: white; font-family: 'Lora', serif;">
+			-Used PHP, SQL, HTML to build a webpage that could interact with an SQL database/server on an EC2 instance, being able to add, remove, retrieve entries from the database from the webpage. 
+      <br>
+      -Site had its own SSL certificate for HTTPS
+      <br>
+      -Sites functionality was also developed to be used as an API
 		</div>
     <p style="color: rgba(173, 157, 114, 0.95);">Demo: <a href="https://ec2-184-73-133-185.compute-1.amazonaws.com">s0undspace.com</a></p>
         <br>
@@ -109,9 +112,10 @@
 
 
 <script>
+
   document.getElementById('myImg').src="images/soundspace_icon.png";
   document.getElementById('projectName').innerHTML="s0undspace.com";
-
+  document.onkeydown = checkKey;
 
   var projects = ["images/soundspace_icon.png", "images/cloud_icon.png", "images/resume_icon.png"];
   var project_names = ["s0undspace.com", "Device Database & API", "resume.pdf"]
@@ -136,5 +140,18 @@
       location.href = "resume.pdf";
   }
 
+  function checkKey(e) {
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+      left();
+    } else if (e.keyCode == '39') {
+      right();
+    }
+    if (e.keyCode == '13')
+      popup();
+
+
+  }
 
 </script>
